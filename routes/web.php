@@ -65,6 +65,9 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::resource('/pendidikan', PendidikanController::class);
     Route::resource('/pengalaman_kerja', PengalamanKerjaController::class);
 });
+Route::get('/session/create','SessionController@create');
+Route::get('/session/show','SessionController@show');
+Route::get('/session/delete','SessionController@delete');
 
 Auth::routes();
 
